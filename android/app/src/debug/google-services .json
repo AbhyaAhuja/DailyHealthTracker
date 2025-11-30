@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "304157965022",
+    "project_id": "health-tracker-coderower",
+    "storage_bucket": "health-tracker-coderower.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304157965022:android:aca3ef0773f24010f6604f",
+        "android_client_info": {
+          "package_name": "com.example.daily_healthtracker_coderower"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304157965022-q4erp09dant2rqndut5io0n2ko1ndb9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.daily_healthtracker_coderower",
+            "certificate_hash": "b4c815021fa31a6b82427f50cb849d56206deff4"
+          }
+        },
+        {
+          "client_id": "304157965022-enbqrgmsrjegqddft04l7u0qiamqpg7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMt2ugDegZ1xzdOEOY856DZWV5lQ3csgM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304157965022-enbqrgmsrjegqddft04l7u0qiamqpg7e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "304157965022-7l5vjkbcmrrhr8oqlr7qt7glmq9dbtco.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.dailyHealthtrackerCoderower"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
