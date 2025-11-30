@@ -1,6 +1,11 @@
+import 'package:daily_healthtracker_coderower/controllers/logs-controller.dart';
 import 'package:daily_healthtracker_coderower/routes/app-routes.dart';
 import 'package:daily_healthtracker_coderower/views/dashboard-screen.dart';
+import 'package:daily_healthtracker_coderower/views/graph-screen.dart';
+import 'package:daily_healthtracker_coderower/views/logs-screen.dart';
+import 'package:daily_healthtracker_coderower/views/profile-screen.dart';
 import 'package:daily_healthtracker_coderower/views/signin-screen.dart';
+import 'package:daily_healthtracker_coderower/views/timer-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,18 +14,21 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+  Get.put(LogsController());
   runApp(
     GetMaterialApp(
       initialRoute: AppRoutes.dashboard,
       getPages: [
         GetPage(name: AppRoutes.login, page: () => SignIn()),
         GetPage(name: AppRoutes.dashboard, page: () => Dashboard()),
+        GetPage(name: AppRoutes.logs, page: () => Logs()),
+        GetPage(name: AppRoutes.timer, page: () => Timer()),
+        GetPage(name: AppRoutes.profile, page: () => Profile()),
+        GetPage(name: AppRoutes.graph, page: () => Graph()),
       ],
     ),
   );
 }
-
 
 //0xFFF3E8DF
 // 0xFF452829

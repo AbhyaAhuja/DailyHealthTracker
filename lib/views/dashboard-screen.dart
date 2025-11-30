@@ -1,4 +1,5 @@
 import 'package:daily_healthtracker_coderower/controllers/signin-controller.dart';
+import 'package:daily_healthtracker_coderower/routes/app-routes.dart';
 import 'package:daily_healthtracker_coderower/widgets/dashboard-card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -87,12 +88,30 @@ class Dashboard extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        
-                        
-                       DashboardCard(icon: Icons.notes, colorCard: Color(0xFFB46343), title: "Logs"),
-                       DashboardCard(icon: Icons.bar_chart, colorCard:  Color(0xFFE16428), title: "Tracker Graph"),
-                       DashboardCard(icon: Icons.timer, colorCard:Color(0xFFF8B52F), title: "Timer"),
-                       DashboardCard(icon: Icons.account_circle, colorCard: Color(0xFFFBD934), title: "Profile"),
+                        DashboardCard(
+                          icon: Icons.notes,
+                          colorCard: Color(0xFFB46343),
+                          title: "Logs",
+                          route: AppRoutes.logs,
+                        ),
+                        DashboardCard(
+                          icon: Icons.bar_chart,
+                          colorCard: Color(0xFFE16428),
+                          title: "Tracker Graph",
+                          route: AppRoutes.graph,
+                        ),
+                        DashboardCard(
+                          icon: Icons.timer,
+                          colorCard: Color(0xFFF8B52F),
+                          title: "Timer",
+                          route: AppRoutes.timer,
+                        ),
+                        DashboardCard(
+                          icon: Icons.account_circle,
+                          colorCard: Color(0xFFFBD934),
+                          title: "Profile",
+                          route: AppRoutes.profile,
+                        ),
                       ],
                     ),
                   ),
