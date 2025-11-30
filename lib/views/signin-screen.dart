@@ -19,7 +19,7 @@ class SignInState extends State<SignIn> {
         decoration: BoxDecoration(
           color: Color.fromARGB(255, 235, 224, 170),
           image: DecorationImage(
-            image: AssetImage('yoga.png'),
+            image: AssetImage('assets/yoga.png'),
             fit: BoxFit.contain,
           ),
         ),
@@ -27,7 +27,7 @@ class SignInState extends State<SignIn> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: EdgeInsets.only(top: 80),
               child: Column(
                 children: [
                   Text(

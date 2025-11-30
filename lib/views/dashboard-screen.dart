@@ -1,4 +1,5 @@
 import 'package:daily_healthtracker_coderower/controllers/signin-controller.dart';
+import 'package:daily_healthtracker_coderower/widgets/dashboard-card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +15,17 @@ class Dashboard extends StatelessWidget {
 
       body: Stack(
         children: [
-          Container(color: Colors.brown),
+          Stack(
+            children: [
+              Container(color: Colors.brown),
+              ElevatedButton(
+                onPressed: () {
+                  controller.signout();
+                },
+                child: Text('signout'),
+              ),
+            ],
+          ),
           Container(
             margin: EdgeInsets.only(
               top: MediaQuery.of(context).size.height * 0.2,
@@ -70,13 +81,21 @@ class Dashboard extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.05),
 
-                Row(
-                  children: [
-                    Container(child: Card(color: Colors.amber)),
-                    Container(child: Card(color: Colors.amber)),
-                    Container(child: Card(color: Colors.amber)),
-                    Container(child: Card(color: Colors.amber)),
-                  ],
+                Container(
+                  padding: EdgeInsets.all(20),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        
+                        
+                       DashboardCard(icon: Icons.notes, colorCard: Color(0xFFB46343), title: "Logs"),
+                       DashboardCard(icon: Icons.bar_chart, colorCard:  Color(0xFFE16428), title: "Tracker Graph"),
+                       DashboardCard(icon: Icons.timer, colorCard:Color(0xFFF8B52F), title: "Timer"),
+                       DashboardCard(icon: Icons.account_circle, colorCard: Color(0xFFFBD934), title: "Profile"),
+                      ],
+                    ),
+                  ),
                 ),
               ],
             ),
