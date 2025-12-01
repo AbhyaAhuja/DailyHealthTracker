@@ -17,7 +17,7 @@ void main() async {
   Get.put(LogsController());
   runApp(
     GetMaterialApp(
-      initialRoute: AppRoutes.dashboard,
+      initialRoute: AppRoutes.login,
       getPages: [
         GetPage(name: AppRoutes.login, page: () => SignIn()),
         GetPage(name: AppRoutes.dashboard, page: () => Dashboard()),
