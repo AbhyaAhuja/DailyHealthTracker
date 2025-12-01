@@ -26,6 +26,7 @@ class LogsCard extends StatelessWidget {
                 ),
                 height: MediaQuery.of(context).size.height * 0.25 * 0.6,
                 width: MediaQuery.of(context).size.height * 0.25 * 0.6,
+                child: Icon(Icons.filter_vintage,size:40,color: Colors.amber[100],),
               ),
               SizedBox(width: 12),
               Expanded(
