@@ -19,11 +19,26 @@ class Dashboard extends StatelessWidget {
           Stack(
             children: [
               Container(color: Colors.brown),
-              ElevatedButton(
-                onPressed: () {
-                  controller.signout();
-                },
-                child: Text('signout'),
+              Positioned(
+                top: 40,
+                left: MediaQuery.of(context).size.width - 140,
+                child: Container(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      controller.signout();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 62, 37, 0),
+                      minimumSize: Size(100, 50),
+                    ),
+                    child: Text(
+                      'signout',
+                      style: GoogleFonts.poppins(
+                        textStyle: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),

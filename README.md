@@ -60,6 +60,11 @@ The app integrates **Firebase Authentication** for secure login and provides a d
 
 ---
 
+### Profile
+<img src="assets/profile.jpg" alt="Sign-In Screen" width="400" height="800">
+
+---
+
 ## 📂 Project Structure
 ```
 lib/
